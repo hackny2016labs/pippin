@@ -22,14 +22,6 @@ gulp.task('sass', function () {
   .pipe(gulp.dest('./dev/'))
 });
 
-// JavaScript
-gulp.task('scripts', function() {
-  gulp.src('./src/js/*.js')
-  .pipe(concat('pippin.js'))
-  .pipe(uglify())
-  .pipe(gulp.dest('./dev/'));
-});
-
 // Watch for Changes Task
 gulp.task('default', function () {
   gulp.watch('./src/sass/**/*.scss', ['sass']);
