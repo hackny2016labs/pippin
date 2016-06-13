@@ -1,3 +1,14 @@
 /* 
-	Pippin - Main scss file
+*	Pippin - Main scss file
 */
+
+// Dependencies
+@import '__reset.scss';
+@import '__variables.scss';
+@import '__mixin.scss';
+@import '__typography.scss';
+
+// Grid System
+@import '__grid.scss';
+
+
