@@ -1,0 +1,84 @@
+
+@import "__mixin.scss";
+
+.row-container, row {
+	@include clearfix();
+}
+
+.row-container {
+	max-width: 921px;
+	margin: 0 auto; 
+
+	row {
+		//delete
+		background: #ddd;
+
+		display: -webkit-box;
+	    display: -moz-box;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-flex-wrap: nowrap;
+	    -ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	    -webkit-flex-basis: 100%;
+	    -ms-flex-basis: 100%;
+	    flex-basis: 100%;
+	    margin-bottom: 25px;
+
+		column {
+			margin: 0;
+			padding: 0;
+			margin-right: 24px;
+
+			// delete afterward
+			background: #eee;
+			padding: 10px 12px;
+		}
+
+		column:last-child {
+			margin-right: 0;
+		}
+
+		column[cols="1"] {
+			width: 8.33333333%;
+		}
+
+		column[cols="2"] {
+			width: 16.66666667%;
+		}
+
+		column[cols="3"] {
+			width: 25%;
+		}
+
+		column[cols="4"] {
+			width: 33.33333333%;
+		}
+		column[cols="8"] {
+			width: 66.66666666%;
+		}
+
+		column[cols="9"] {
+			width: 75%;
+		}
+
+		column[cols="10"] {
+			width: 83.33333333%;
+		}
+
+		column[cols="11"] {
+			width: 91.66666667%;
+		}
+
+		column[cols="12"] {
+			width: 100%;
+		}
+	}
+
+	row[distribute] {
+		-webkit-justify-content: space-around;
+    	-ms-flex-pack: distribute;
+		justify-content: space-around;
+	}
+}
