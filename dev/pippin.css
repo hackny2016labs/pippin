@@ -9,6 +9,8 @@
 *	Mixins
 *	Useful mixins for developing quick webpages
 */
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 .clearfix:after {
   content: "";
   display: table;
@@ -100,52 +102,151 @@ table {
   top: 50%;
   transform: translate(-50%); }
 
-.row-container:after, row:after {
+.row-container:after {
   content: "";
   display: table;
   clear: both; }
 
 .row-container {
-  max-width: 921px;
+  max-width: 800px;
   margin: 0 auto; }
-  .row-container row {
-    background: #ddd;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -ms-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+
+row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin-bottom: 25px; }
+  row column {
+    margin: 0;
+    padding: 0;
+    margin-right: 24px; }
+  row column:last-child {
+    margin-right: 0; }
+  row column[cols="1"] {
+    width: 8.33333333%; }
+  row column[cols="2"] {
+    width: 16.66666667%; }
+  row column[cols="3"] {
+    width: 25%; }
+  row column[cols="4"] {
+    width: 33.33333333%; }
+  row column[cols="5"] {
+    width: 41.66666667%; }
+  row column[cols="6"] {
+    width: 50%; }
+  row column[cols="7"] {
+    width: 58.33333333%; }
+  row column[cols="8"] {
+    width: 66.66666666%; }
+  row column[cols="9"] {
+    width: 75%; }
+  row column[cols="10"] {
+    width: 83.33333333%; }
+  row column[cols="11"] {
+    width: 91.66666667%; }
+  row column[cols="12"] {
+    width: 100%; }
+
+row[distribute] {
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+row[center] {
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+body {
+  font-family: 'Proxima Nova', 'Helvetica', sans-serif; }
+  body h1 {
+    text-align: center;
+    margin-top: 30px;
     margin-bottom: 25px; }
-    .row-container row column {
-      margin: 0;
-      padding: 0;
-      margin-right: 24px;
+  body row {
+    background: #ddd; }
+    body row column {
       background: #eee;
-      padding: 10px 12px; }
-    .row-container row column:last-child {
-      margin-right: 0; }
-    .row-container row column[cols="1"] {
-      width: 8.33333333%; }
-    .row-container row column[cols="2"] {
-      width: 16.66666667%; }
-    .row-container row column[cols="3"] {
-      width: 25%; }
-    .row-container row column[cols="4"] {
-      width: 33.33333333%; }
-    .row-container row column[cols="8"] {
-      width: 66.66666666%; }
-    .row-container row column[cols="9"] {
-      width: 75%; }
-    .row-container row column[cols="10"] {
-      width: 83.33333333%; }
-    .row-container row column[cols="11"] {
-      width: 91.66666667%; }
-    .row-container row column[cols="12"] {
-      width: 100%; }
-  .row-container row[distribute] {
-    -ms-flex-pack: distribute;
-    justify-content: space-around; }
+      padding: 15px; }
+
+@media screen and (max-width: 768px) {
+  row {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 0; }
+    row column[cols='1'], row column[cols='2'], row column[cols='3'],
+    row column[cols='4'], row column[cols='5'], row column[cols='6'],
+    row column[cols='7'], row column[cols='8'], row column[cols='9'],
+    row column[cols='10'], row column[cols='11'], row column[cols='12'] {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 25px; } }
+
+/*
+*	Variables
+*	A collection of variables used in other scss files
+*/
+pre.code {
+  background: #f2f2f2;
+  color: #121212;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  line-height: 1.5em;
+  word-wrap: normal;
+  white-space: normal;
+  font-family: "Inconsolata", Helvetica, sans-serif; }
+  pre.code ol {
+    padding: 30px; }
+    pre.code ol li span {
+      margin: 0;
+      padding: 0; }
+    pre.code ol .nudge-1 {
+      padding-left: calc(25px * 1); }
+    pre.code ol .nudge-2 {
+      padding-left: calc(25px * 2); }
+    pre.code ol .nudge-3 {
+      padding-left: calc(25px * 3); }
+    pre.code ol .nudge-4 {
+      padding-left: calc(25px * 4); }
+    pre.code ol .nudge-5 {
+      padding-left: calc(25px * 5); }
+    pre.code ol .nudge-6 {
+      padding-left: calc(25px * 6); }
+    pre.code ol .nudge-7 {
+      padding-left: calc(25px * 7); }
+    pre.code ol .nudge-8 {
+      padding-left: calc(25px * 8); }
+    pre.code ol .nudge-9 {
+      padding-left: calc(25px * 9); }
+    pre.code ol .nudge-10 {
+      padding-left: calc(25px * 10); }
+    pre.code ol .nudge-11 {
+      padding-left: calc(25px * 11); }
+    pre.code ol .nudge-12 {
+      padding-left: calc(25px * 12); }
+
+pre.code.color ol li span.tag {
+  color: #1E5E9E; }
+
+pre.code.color ol li span.attr {
+  color: #3498DB; }
+
+pre.code.color ol li span.value {
+  color: #E74C3C; }
+
+pre.code.numbered ol li {
+  list-style-type: none;
+  counter-increment: list;
+  position: relative;
+  margin-left: 1.625em; }
+  pre.code.numbered ol li:after {
+    content: counter(list);
+    left: -2.5em;
+    position: absolute;
+    border-right: 1px solid #e5e5e5;
+    color: #ccc;
+    padding-right: 10px; }
 
 /*# sourceMappingURL=pippin.css.map */

@@ -2,3 +2,12 @@
 *	Variables
 *	A collection of variables used in other scss files
 */
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+// Font Presets
+$pretext-font: 'Inconsolata', Helvetica, sans-serif;
+$pretext-tag-color: #1E5E9E;
+$pretext-attr-color: #3498DB;
+$pretext-value-color: #E74C3C;

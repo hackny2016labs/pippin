@@ -1,0 +1,17 @@
+
+@media screen and (max-width: 768px) {
+	row {
+
+		flex-direction: column; 
+		margin-bottom: 0;
+		
+		column[cols='1'], column[cols='2'], column[cols='3'],
+		column[cols='4'], column[cols='5'], column[cols='6'],
+		column[cols='7'], column[cols='8'], column[cols='9'],
+		column[cols='10'], column[cols='11'], column[cols='12'] {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 25px;
+		}
+	}
+}
