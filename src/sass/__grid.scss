@@ -34,52 +34,16 @@ row {
 		margin-right: 0;
 	}
 
-	column[cols="1"] {
-		width: 8.33333333%;
-	}
+	@for $i from 1 through 12 {
+		column[cols="#{$i}"] {
+			$width: calc(#{$i} / 12 * 100%);
+			width: $width;
+		}
 
-	column[cols="2"] {
-		width: 16.66666667%;
-	}
-
-	column[cols="3"] {
-		width: 25%;
-	}
-
-	column[cols="4"] {
-		width: 33.33333333%;
-	}
-
-	column[cols="5"] {
-		width: 41.66666667%;
-	}
-
-	column[cols="6"] {
-		width: 50%;
-	}
-
-	column[cols="7"] {
-		width: 58.33333333%;
-	}
-
-	column[cols="8"] {
-		width: 66.66666666%;
-	}
-
-	column[cols="9"] {
-		width: 75%;
-	}
-
-	column[cols="10"] {
-		width: 83.33333333%;
-	}
-
-	column[cols="11"] {
-		width: 91.66666667%;
-	}
-
-	column[cols="12"] {
-		width: 100%;
+		column[offset="#{$i}"] {
+			$offset: calc(#{$i} / 12 * 100%);
+			margin-left: $offset;
+		}
 	}
 }
 

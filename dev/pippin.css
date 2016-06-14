@@ -127,29 +127,53 @@ row {
   row column:last-child {
     margin-right: 0; }
   row column[cols="1"] {
-    width: 8.33333333%; }
+    width: calc(1 / 12 * 100%); }
+  row column[offset="1"] {
+    margin-left: calc(1 / 12 * 100%); }
   row column[cols="2"] {
-    width: 16.66666667%; }
+    width: calc(2 / 12 * 100%); }
+  row column[offset="2"] {
+    margin-left: calc(2 / 12 * 100%); }
   row column[cols="3"] {
-    width: 25%; }
+    width: calc(3 / 12 * 100%); }
+  row column[offset="3"] {
+    margin-left: calc(3 / 12 * 100%); }
   row column[cols="4"] {
-    width: 33.33333333%; }
+    width: calc(4 / 12 * 100%); }
+  row column[offset="4"] {
+    margin-left: calc(4 / 12 * 100%); }
   row column[cols="5"] {
-    width: 41.66666667%; }
+    width: calc(5 / 12 * 100%); }
+  row column[offset="5"] {
+    margin-left: calc(5 / 12 * 100%); }
   row column[cols="6"] {
-    width: 50%; }
+    width: calc(6 / 12 * 100%); }
+  row column[offset="6"] {
+    margin-left: calc(6 / 12 * 100%); }
   row column[cols="7"] {
-    width: 58.33333333%; }
+    width: calc(7 / 12 * 100%); }
+  row column[offset="7"] {
+    margin-left: calc(7 / 12 * 100%); }
   row column[cols="8"] {
-    width: 66.66666666%; }
+    width: calc(8 / 12 * 100%); }
+  row column[offset="8"] {
+    margin-left: calc(8 / 12 * 100%); }
   row column[cols="9"] {
-    width: 75%; }
+    width: calc(9 / 12 * 100%); }
+  row column[offset="9"] {
+    margin-left: calc(9 / 12 * 100%); }
   row column[cols="10"] {
-    width: 83.33333333%; }
+    width: calc(10 / 12 * 100%); }
+  row column[offset="10"] {
+    margin-left: calc(10 / 12 * 100%); }
   row column[cols="11"] {
-    width: 91.66666667%; }
+    width: calc(11 / 12 * 100%); }
+  row column[offset="11"] {
+    margin-left: calc(11 / 12 * 100%); }
   row column[cols="12"] {
-    width: 100%; }
+    width: calc(12 / 12 * 100%); }
+  row column[offset="12"] {
+    margin-left: calc(12 / 12 * 100%); }
 
 row[distribute] {
   -ms-flex-pack: distribute;
@@ -161,10 +185,15 @@ row[center] {
 
 body {
   font-family: 'Proxima Nova', 'Helvetica', sans-serif; }
+  body h1, body h2 {
+    text-align: center; }
   body h1 {
-    text-align: center;
     margin-top: 30px;
     margin-bottom: 25px; }
+  body h2 {
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 20px; }
   body row {
     background: #ddd; }
     body row column {
@@ -227,13 +256,13 @@ pre.code {
     pre.code ol .nudge-12 {
       padding-left: calc(25px * 12); }
 
-pre.code.color ol li span.tag {
+pre.code.colored ol li span.tag {
   color: #1E5E9E; }
 
-pre.code.color ol li span.attr {
+pre.code.colored ol li span.attr {
   color: #3498DB; }
 
-pre.code.color ol li span.value {
+pre.code.colored ol li span.value {
   color: #E74C3C; }
 
 pre.code.numbered ol li {
