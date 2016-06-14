@@ -1,7 +1,8 @@
 // Temporary File
 
 body {
-	font-family: 'Proxima Nova', 'Helvetica', sans-serif;
+	font-family: 'Freight Sans Pro', 'Helvetica', sans-serif;
+	font-size: 13px;
 
 	h1, h2 {
 		text-align: center;
@@ -19,9 +20,8 @@ body {
 	}
 
 	row {
-		background: #ddd;
 		column {
-
+			border-radius: 3px;
 			background: #eee;
 			padding: 15px;
 
