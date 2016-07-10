@@ -8,10 +8,10 @@
 @import '__mixin.scss';
 @import '__typography.scss';
 
-// Grid System
+
+// Grid/Layout
+@import '__layout.scss';
 @import '__grid.scss';
-// Temporary File - Delete
-@import '__gridtest.scss';
 @import '__grid_breakpoints.scss';
 
 // Pretext

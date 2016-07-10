@@ -6,23 +6,24 @@
 }
 
 .row-container {
-	max-width: 800px;
+	max-width: 80rem;
 	margin: 0 auto; 
 }
 
 row {
 	display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-flex-basis: 100%;
-    -ms-flex-basis: 100%;
-    flex-basis: 100%;
-    margin-bottom: 25px;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-basis: 100%;
+  -ms-flex-basis: 100%;
+  flex-basis: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
 	column {
 		margin: 0;
